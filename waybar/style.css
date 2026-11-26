@@ -1,0 +1,88 @@
+* {
+  font-family: "IosevkaTermSlab Nerd Font Propo", "Symbols Nerd Font";
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+window#waybar {
+  background: #000000;
+  color: #dcd7ba;
+  border-bottom: solid 1px #1f1f27;
+}
+
+#custom-os {
+  font-size: 18px;
+  margin-left: 12px;
+}
+
+#workspaces.persistent {
+  margin-left: 10px;
+}
+
+#workspaces button {
+  color: #dcd7ba;
+  background: none;
+  box-shadow: none;
+  text-shadow: none;
+  border: none;
+  transition: none;
+}
+
+#workspaces button.active {
+  color: #7e9cd8;
+}
+
+#workspaces button.empty {
+  color: #727169;
+}
+
+#workspaces button.active.empty {
+  color: #7e9cd8;
+}
+
+#workspaces button:hover {
+  box-shadow: none;
+  text-shadow: none;
+  border: none;
+  transition: none;
+}
+#custom-spotify {
+  color: #dcd7ba;
+}
+#clock,
+#clock-calendar {
+  color: #dcd7ba;
+  padding-right: 5px;
+}
+#tray,
+#custom-vpn,
+#cpu,
+#memory,
+#network,
+#pulseaudio,
+#backlight,
+#battery {
+  padding: 0 5px;
+  color: #dcd7ba;
+}
+
+#battery.warning {
+  color: #e6c384;
+}
+
+#battery.critical {
+  color: #e82424;
+}
+
+#custom-vpn {
+  margin-right: 10px;
+}
+
+#custom-vpn.connected {
+  color: #76946a;
+}
+
+#custom-vpn.disconnected {
+  color: #dcd7ba;
+}

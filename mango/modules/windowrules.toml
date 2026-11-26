@@ -1,0 +1,39 @@
+[[rule.window_rule]]
+app_id = "helium"
+tags = 2
+is_tag_silent = 1
+is_open_silent = 1
+
+[[rule.window_rule]]
+app_id = "chrome-hnpfjngllnobngcgfapefoaidbinmjnm-Default"
+tags = 3
+is_tag_silent = 1
+is_open_silent = 1
+
+[[rule.window_rule]]
+app_id = "obs"
+tags = 6
+is_tag_silent = 1
+is_open_silent = 1
+
+[[rule.window_rule]]
+app_id = "DBeaver"
+tags = 4
+is_tag_silent = 1
+is_open_silent = 1
+
+[[rule.window_rule]]
+app_id = "Spotify"
+tags = 5
+is_tag_silent = 1
+is_open_silent = 1
+
+[[rule.window_rule]]
+app_id = "mpv"
+tags = 5
+is_tag_silent = 1
+is_open_silent = 1
+
+[[rule.window_rule]]
+app_id = "ONLYOFFICE"
+force_fake_maximize = 1

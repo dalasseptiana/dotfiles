@@ -1,0 +1,18 @@
+theme = kanagawa-amoled
+font-family = IosevkaTermSlab Nerd Font
+font-size = 14
+confirm-close-surface = false
+window-padding-x = 5
+window-padding-y = 5
+window-padding-balance = true
+shell-integration-features = no-cursor
+keybind = alt+one=unbind
+keybind = alt+two=unbind
+keybind = alt+three=unbind
+keybind = alt+four=unbind
+keybind = alt+five=unbind
+keybind = alt+six=unbind
+keybind = alt+seven=unbind
+keybind = alt+eight=unbind
+keybind = alt+nine=unbind
+keybind = ctrl+shift+n=unbind

@@ -1,0 +1,136 @@
+{
+  "position": "top",
+  "layer": "top",
+  "height": 30,
+  "reload_style_on_change": true,
+  "modules-left": ["custom/os", "mango/workspaces#persistent", "mango/workspaces#dynamic", "custom/spotify"],
+  "modules-center": ["clock", "clock#calendar"],
+  "modules-right": [
+    "tray",
+    "cpu",
+    "memory",
+    "network",
+    "pulseaudio",
+    "backlight",
+    "battery",
+    "custom/vpn"
+  ],
+  "custom/os" : {
+    "format": " |",
+    "tooltip": false,
+    "cursor": false
+  },
+"mango/workspaces#persistent": {
+  "format": "{icon}",
+  "format-icons": {
+    "1": " ",
+    "2": "󰖟 ",
+    "3": "󰭻 ",
+    "4": " ",
+    "5": "󰥠 "
+  },
+  "tag-filter": [1, 2, 3, 4, 5],
+  "hide-empty": false,
+  "tooltip": false,
+  "cursor": false
+},
+"mango/workspaces#dynamic": {
+  "format": "{icon}",
+  "format-icons": {
+    "default": " "
+  },
+  "tag-filter": [6, 7, 8, 9, 10],
+  "hide-empty": true,
+  "tooltip": false,
+  "cursor": false
+},
+"custom/spotify": {
+  "exec": "playerctl -p spotify metadata --format '{{ artist }} - {{ title }}' --follow",
+  "format": "|  {}",
+  "max-length": 35,
+  "escape": true,
+  "on-click": "playerctl -p spotify play-pause",
+  "on-scroll-up": "playerctl -p spotify next",
+  "on-scroll-down": "playerctl -p spotify previous",
+  "tooltip": false,
+  "cursor": false
+},
+"tray": {
+    "icon-size": 12,
+    "spacing": 10
+  },
+  "custom/vpn": {
+    "exec": "~/dotfiles/mango/modules/vpn-toggle.sh",
+    "return-type": "json",
+    "interval": 5,
+    "signal": 8,
+    "on-click": "~/dotfiles/mango/modules/vpn-toggle.sh toggle",
+    "tooltip": false,
+    "cursor": false
+  },
+  "cpu": {
+	"interval": 10,
+	"format": " {}% ",
+	"max-length": 15,
+	"tooltip" : false
+},
+"memory" : {
+	"interval": 10,
+	"format": " {}% ",
+	"max-length": 15,
+	"tooltip" : false
+},
+  "network": {
+    "interface": "wlp2s0",
+    "interval": 10,
+    "format": "󱛅 ",
+    "format-wifi": "󰖩 {essid} ",
+    "format-ethernet": "󰈀 {bandwidthUpBits} {bandwidthDownBits} ",
+    "format-disconnected": "󱘖 Disconnected !",
+    "format-alt": "net: {ipaddr}/{cidr}",
+    "tooltip": false,
+    "max-length": 50,
+    "cursor": false
+  },
+  "pulseaudio": {
+    "format": "󰕾 {volume}% ",
+    "format-muted": "󰝟 ",
+    "scroll-step": 5,
+    "tooltip": false
+  },
+  "backlight": {
+    "format": " {percent}% ",
+    "tooltip": false
+  },
+  "battery": {
+    "interval": 60,
+    "states": {
+      "warning": 20,
+      "critical": 10
+    },
+    "events": {
+      "on-discharging-warning": "notify-send -u normal 'Low Battery'",
+      "on-discharging-critical": "notify-send -u critical 'Very Low Battery'",
+      "on-charging-100": "notify-send -u normal 'Battery Full!'",
+      "on-discharging": "notify-send -u normal 'Power Switch' Discharging",
+      "on-charging": "notify-send -u normal 'Power Switch' Charging'"
+    },
+    "format": "{icon} {capacity}% ",
+    "format-icons": {
+      "default": ["󰂎"],
+      "charging": ["󰢟 "]
+    },
+    "max-length": 25,
+    "tooltip": false
+  },
+  "clock": {
+    "interval": 60,
+    "format": " {:%H:%M} ",
+    "max-length": 25
+  },
+  "clock#calendar": {
+    "interval": 60,
+    "format": " {:%d %b %Y}",
+    "max-length": 25
+  }
+}
